@@ -1,5 +1,4 @@
-//Dependencies
-//Routes
+
 const express = require("express");
 const apiRouter = express.Router();
 
@@ -11,7 +10,6 @@ apiRouter.get("/api/notes", (req, res) => {
     fs.readFile('./db/db.json', 'utf8', (error, file) => {
         if (error) throw error;
 
-        //return parsed text
         const parsedFile = JSON.parse(file);
         return res.send(parsedFile);
     });
@@ -28,15 +26,12 @@ apiRouter.post("/api/notes", (req, res) => {
     fs.readFile('./db/db.json', 'utf8', (error, file) => {
         if (error) throw error;
 
-        //parse db.json into an JSON object
         const parsedFile = JSON.parse(file);
-        // pushes the new note to the JSON object
         parsedFile.push(note);
 
         //makes new stringify of the combined file to write back to file
         const newStringifiedFile = JSON.stringify(parsedFile);
 
-        //rewrite file as a combined file
         fs.writeFile('./db/db.json', newStringifiedFile, 'utf8', (err) => {
             if (err) throw err;
             console.log("New note was appeneded to your file.");
@@ -47,10 +42,9 @@ apiRouter.post("/api/notes", (req, res) => {
 });
 
 //Delete function
-// To delete a note from the db.json file, the function needs to read all the notes from the file, removing the note with the correct 'id', then rewriting the notes to the file.
 
 apiRouter.delete("/api/notes/:id", (req, res) => {
-    //filters the id, replacing the array without the id
+    
     fs.readFile('./db/db.json', 'utf8', (error, file) => {
         if (error) throw error;
 
