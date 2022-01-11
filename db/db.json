@@ -1,6 +1,32 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title":"Here's your first note.",
+        "text":"Looks pretty good.",
+        "id":1636227785471
+    },
+    {
+        "title":"Cat names.",
+        "text":"Phoenix, Fluffy, Scratches",
+        "id":1636227805587
+    },
+    {
+        "title":"Things to do tomorrow.",
+        "text":"Take more notes.",
+        "id":1636227808861
+    },
+    {
+        "title":"What should I eat for dinner?",
+        "text":"Pizza or Pasta.",
+        "id":1636227815934
+    },
+    {
+        "title":"What's left to say?",
+        "text":"Not much.",
+        "id":1636228039345
+    },
+    {
+        "title":"This has been fun hasn't it?",
+        "text":"It sure has.",
+        "id":1636228042419
     }
 ]
